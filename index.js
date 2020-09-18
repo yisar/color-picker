@@ -14,7 +14,6 @@ export function getColor(ctx, pre = 20) {
         c[3] = (c[0] - c[c.length - 1]) / c[0]
         return c
     }).sort((a, b) => b[3] - a[3])
-
     let color = res[res.length >>> 1]
     return 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')';
 }
