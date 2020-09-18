@@ -14,8 +14,7 @@ export function getColor(ctx, pre = 20) {
         return flag > 20 && flag < 230
     }).map(c => {
         c.slice().sort((a, b) => b - a)
-        const g = (c[0] - c[c.length - 1]) / c[0]
-        c[3] = g
+        c[3] = (c[0] - c[c.length - 1]) / c[0]
         return c
     }).sort((a, b) => b[3] - a[3])
 
