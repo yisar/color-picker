@@ -1,6 +1,6 @@
 export function getColor(ctx, pre = 20) {
     if (!ctx.getImageData) ctx = ctx.getContext('2d')
-    let matrix = []
+    const matrix = []
     for (let x = 0; x <= ctx.canvas.width; x = x + pre) {
         for (let y = 0; y <= ctx.canvas.height; y = y + pre) {
             matrix.push([x, y])
