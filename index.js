@@ -8,7 +8,7 @@ export function getColor(ctx, pre = 20) {
     }
     let res = matrix.map(p => ctx.getImageData(p[0], p[1], 1, 1).data).filter(c => {
         const l = c[0] * 0.30 + c[1] * 0.59 + c[2] * 0.11
-        return l > 0.1 && l < 0.9
+        return 200 < l < 50
     }).map(c => {
         c.slice().sort((a, b) => b - a)
         c[3] = (c[0] - c[c.length - 1]) / c[0]
